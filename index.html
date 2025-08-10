@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Moon Trajectory Calculator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>Moon Trajectory Calculator</h1>
+</header>
+
+<main>
+  <section class="inputs">
+    <label>Launch Date (IST): <input type="date" id="launchDate"></label>
+    <label>Launch Time (IST): <input type="time" step="1" id="launchTime"></label>
+    <label>Parking Orbit Perigee (km): <input type="number" id="perigee" value="200"></label>
+    <label>Parking Orbit Apogee (km): <input type="number" id="apogee" value="200"></label>
+    <label>Target Lunar Orbit Radius (km from Moon center): <input type="number" id="lunarOrbitRadius" value="1838"></label>
+    <button id="computeBtn">Compute Trajectory</button>
+  </section>
+
+  <section class="outputs">
+    <h2>Results</h2>
+    <pre id="results"></pre>
+    <button id="downloadCsvBtn">Download CSV</button>
+    <button id="downloadSvgBtn">Download SVG Snapshot</button>
+  </section>
+
+  <section class="canvas-container">
+    <canvas id="trajectoryCanvas"></canvas>
+  </section>
+</main>
+
+<footer>
+  <p>Pure JS Earth→Moon transfer tool — works offline after first load</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
